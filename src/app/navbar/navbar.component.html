@@ -1,0 +1,31 @@
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark ">
+  <div class="container">
+  <a class="navbar-brand" [routerLink]="'.'">Navbar de ng-Bootstrap</a>
+
+
+  <!-- <p>
+    A responsive navbar can be achieved with an <code>ngbCollapse</code> directive.
+  </p>Step 3: Toggle the value of the property when the toggler button is clicked. -->
+  <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+    &#9776;
+  </button>
+
+  <!-- Step 2: Add the ngbCollapse directive to the element below. -->
+  <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
+    <ul class="navbar-nav ml-auto">
+      <!--ml para llevar el contenido al lado derecho-->
+      <li class="nav-item active">
+        <!-- Step 4: Close the menu when a link is clicked. usar routerlink en ng routing module-->
+        <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">Inicio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">Próximos estrenos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">Conócenos</a>
+      </li>
+    </ul>
+  </div>
+</div>
+</nav>
