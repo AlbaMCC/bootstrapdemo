@@ -129,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "bootstrapdemo"
+  "defaultProject": "bootstrapdemo",
+  "cli": {
+    "analytics": "42b9dbb1-8450-42f4-9c6b-ad5388cc006c"
+  }
 }
